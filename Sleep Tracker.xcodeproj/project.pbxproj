@@ -7,23 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8CEA96F654C3673D453A8CE /* Pods_Sleep_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C409EB44AE4106BE0ADAD9D /* Pods_Sleep_Tracker.framework */; };
 		B3D69D922B779B3300CBA806 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D69D912B779B3300CBA806 /* AppDelegate.swift */; };
 		B3D69D942B779B3300CBA806 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D69D932B779B3300CBA806 /* SceneDelegate.swift */; };
-		B3D69D962B779B3300CBA806 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D69D952B779B3300CBA806 /* ViewController.swift */; };
-		B3D69D992B779B3300CBA806 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D69D972B779B3300CBA806 /* Main.storyboard */; };
+		B3D69D962B779B3300CBA806 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D69D952B779B3300CBA806 /* OnboardingViewController.swift */; };
 		B3D69D9B2B779B3400CBA806 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D69D9A2B779B3400CBA806 /* Assets.xcassets */; };
 		B3D69D9E2B779B3400CBA806 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D69D9C2B779B3400CBA806 /* LaunchScreen.storyboard */; };
+		B3D69DA92B779EE000CBA806 /* SubOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D69DA82B779EE000CBA806 /* SubOnboardingViewController.swift */; };
+		B3D69DB42B77A12C00CBA806 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D69DB32B77A12C00CBA806 /* Fonts.swift */; };
+		B3D69DB82B77A23F00CBA806 /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D69DB72B77A23F00CBA806 /* UIColor+Colors.swift */; };
+		B3D69DBA2B77A40700CBA806 /* UIFont+LineHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D69DB92B77A40700CBA806 /* UIFont+LineHeight.swift */; };
+		B3D69DBD2B77AA3200CBA806 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D69DBC2B77AA3200CBA806 /* AuthViewController.swift */; };
+		B3D69DBE2B77C3D300CBA806 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3D69DB02B77A0A200CBA806 /* Raleway-Bold.ttf */; };
+		B3D69DBF2B77C3D300CBA806 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3D69DAE2B77A0A200CBA806 /* Raleway-Medium.ttf */; };
+		B3D69DC02B77C3D300CBA806 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3D69DAF2B77A0A200CBA806 /* Raleway-Regular.ttf */; };
+		B3D69DC12B77C3D300CBA806 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3D69DB12B77A0A200CBA806 /* Raleway-SemiBold.ttf */; };
+		B3D69DC22B77C3D300CBA806 /* PPNeueMontreal-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3D69DAC2B77A02B00CBA806 /* PPNeueMontreal-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C409EB44AE4106BE0ADAD9D /* Pods_Sleep_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sleep_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71565657A72B774722536DC9 /* Pods-Sleep Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleep Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Sleep Tracker/Pods-Sleep Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		8ADBDCCDFF62565D0CE8FFD2 /* Pods-Sleep Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleep Tracker.release.xcconfig"; path = "Target Support Files/Pods-Sleep Tracker/Pods-Sleep Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		B3D69D8E2B779B3300CBA806 /* Sleep Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sleep Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D69D912B779B3300CBA806 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3D69D932B779B3300CBA806 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B3D69D952B779B3300CBA806 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B3D69D982B779B3300CBA806 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B3D69D952B779B3300CBA806 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		B3D69D9A2B779B3400CBA806 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3D69D9D2B779B3400CBA806 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3D69D9F2B779B3400CBA806 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3D69DA82B779EE000CBA806 /* SubOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubOnboardingViewController.swift; sourceTree = "<group>"; };
+		B3D69DAC2B77A02B00CBA806 /* PPNeueMontreal-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PPNeueMontreal-Medium.otf"; path = "../../../../../../../Downloads/PP Neue Montreal - Free for Personal Use v2.6/OTF/PPNeueMontreal-Medium.otf"; sourceTree = "<group>"; };
+		B3D69DAE2B77A0A200CBA806 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Medium.ttf"; path = "../../../../../../../Downloads/Raleway (1)/static/Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		B3D69DAF2B77A0A200CBA806 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "../../../../../../../Downloads/Raleway (1)/static/Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		B3D69DB02B77A0A200CBA806 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Bold.ttf"; path = "../../../../../../../Downloads/Raleway (1)/static/Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		B3D69DB12B77A0A200CBA806 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-SemiBold.ttf"; path = "../../../../../../../Downloads/Raleway (1)/static/Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		B3D69DB32B77A12C00CBA806 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		B3D69DB72B77A23F00CBA806 /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
+		B3D69DB92B77A40700CBA806 /* UIFont+LineHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+LineHeight.swift"; sourceTree = "<group>"; };
+		B3D69DBC2B77AA3200CBA806 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +53,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8CEA96F654C3673D453A8CE /* Pods_Sleep_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1CF3D51D8B9B89789723123 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71565657A72B774722536DC9 /* Pods-Sleep Tracker.debug.xcconfig */,
+				8ADBDCCDFF62565D0CE8FFD2 /* Pods-Sleep Tracker.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B3D69D852B779B3300CBA806 = {
 			isa = PBXGroup;
 			children = (
 				B3D69D902B779B3300CBA806 /* Sleep Tracker */,
 				B3D69D8F2B779B3300CBA806 /* Products */,
+				A1CF3D51D8B9B89789723123 /* Pods */,
+				E8006E58A552A7F7C45DB3A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +91,112 @@
 		B3D69D902B779B3300CBA806 /* Sleep Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				B3D69DB22B77A12100CBA806 /* Common */,
+				B3D69DA62B779DC100CBA806 /* Features */,
+				B3D69DA52B779DB000CBA806 /* Resources */,
 				B3D69D912B779B3300CBA806 /* AppDelegate.swift */,
 				B3D69D932B779B3300CBA806 /* SceneDelegate.swift */,
-				B3D69D952B779B3300CBA806 /* ViewController.swift */,
-				B3D69D972B779B3300CBA806 /* Main.storyboard */,
-				B3D69D9A2B779B3400CBA806 /* Assets.xcassets */,
 				B3D69D9C2B779B3400CBA806 /* LaunchScreen.storyboard */,
 				B3D69D9F2B779B3400CBA806 /* Info.plist */,
 			);
 			path = "Sleep Tracker";
+			sourceTree = "<group>";
+		};
+		B3D69DA52B779DB000CBA806 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B3D69DAA2B77A00C00CBA806 /* Fonts */,
+				B3D69D9A2B779B3400CBA806 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B3D69DA62B779DC100CBA806 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				B3D69DBB2B77AA0000CBA806 /* Auth Page */,
+				B3D69DA72B779DCC00CBA806 /* Onboarding Page */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		B3D69DA72B779DCC00CBA806 /* Onboarding Page */ = {
+			isa = PBXGroup;
+			children = (
+				B3D69D952B779B3300CBA806 /* OnboardingViewController.swift */,
+				B3D69DA82B779EE000CBA806 /* SubOnboardingViewController.swift */,
+			);
+			path = "Onboarding Page";
+			sourceTree = "<group>";
+		};
+		B3D69DAA2B77A00C00CBA806 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B3D69DAD2B77A03100CBA806 /* Raleway */,
+				B3D69DAB2B77A01700CBA806 /* Neue Montreal */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B3D69DAB2B77A01700CBA806 /* Neue Montreal */ = {
+			isa = PBXGroup;
+			children = (
+				B3D69DAC2B77A02B00CBA806 /* PPNeueMontreal-Medium.otf */,
+			);
+			path = "Neue Montreal";
+			sourceTree = "<group>";
+		};
+		B3D69DAD2B77A03100CBA806 /* Raleway */ = {
+			isa = PBXGroup;
+			children = (
+				B3D69DB02B77A0A200CBA806 /* Raleway-Bold.ttf */,
+				B3D69DAE2B77A0A200CBA806 /* Raleway-Medium.ttf */,
+				B3D69DAF2B77A0A200CBA806 /* Raleway-Regular.ttf */,
+				B3D69DB12B77A0A200CBA806 /* Raleway-SemiBold.ttf */,
+			);
+			path = Raleway;
+			sourceTree = "<group>";
+		};
+		B3D69DB22B77A12100CBA806 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B3D69DB62B77A23200CBA806 /* Extensions */,
+				B3D69DB52B77A21A00CBA806 /* Helpers */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B3D69DB52B77A21A00CBA806 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B3D69DB32B77A12C00CBA806 /* Fonts.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B3D69DB62B77A23200CBA806 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B3D69DB72B77A23F00CBA806 /* UIColor+Colors.swift */,
+				B3D69DB92B77A40700CBA806 /* UIFont+LineHeight.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B3D69DBB2B77AA0000CBA806 /* Auth Page */ = {
+			isa = PBXGroup;
+			children = (
+				B3D69DBC2B77AA3200CBA806 /* AuthViewController.swift */,
+			);
+			path = "Auth Page";
+			sourceTree = "<group>";
+		};
+		E8006E58A552A7F7C45DB3A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C409EB44AE4106BE0ADAD9D /* Pods_Sleep_Tracker.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +206,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3D69DA22B779B3400CBA806 /* Build configuration list for PBXNativeTarget "Sleep Tracker" */;
 			buildPhases = (
+				8F7B1F556FF20BE57B74737C /* [CP] Check Pods Manifest.lock */,
+				B3B54D442B79115000D23677 /* ShellScript */,
 				B3D69D8A2B779B3300CBA806 /* Sources */,
 				B3D69D8B2B779B3300CBA806 /* Frameworks */,
 				B3D69D8C2B779B3300CBA806 /* Resources */,
+				4ED03DDCE93FCC2CDA572E65 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,20 +260,90 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3D69DBE2B77C3D300CBA806 /* Raleway-Bold.ttf in Resources */,
+				B3D69DBF2B77C3D300CBA806 /* Raleway-Medium.ttf in Resources */,
+				B3D69DC02B77C3D300CBA806 /* Raleway-Regular.ttf in Resources */,
+				B3D69DC12B77C3D300CBA806 /* Raleway-SemiBold.ttf in Resources */,
+				B3D69DC22B77C3D300CBA806 /* PPNeueMontreal-Medium.otf in Resources */,
 				B3D69D9E2B779B3400CBA806 /* LaunchScreen.storyboard in Resources */,
 				B3D69D9B2B779B3400CBA806 /* Assets.xcassets in Resources */,
-				B3D69D992B779B3300CBA806 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4ED03DDCE93FCC2CDA572E65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sleep Tracker/Pods-Sleep Tracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sleep Tracker/Pods-Sleep Tracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sleep Tracker/Pods-Sleep Tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F7B1F556FF20BE57B74737C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sleep Tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3B54D442B79115000D23677 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B3D69D8A2B779B3300CBA806 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3D69D962B779B3300CBA806 /* ViewController.swift in Sources */,
+				B3D69DBA2B77A40700CBA806 /* UIFont+LineHeight.swift in Sources */,
+				B3D69DA92B779EE000CBA806 /* SubOnboardingViewController.swift in Sources */,
+				B3D69DB82B77A23F00CBA806 /* UIColor+Colors.swift in Sources */,
+				B3D69DB42B77A12C00CBA806 /* Fonts.swift in Sources */,
+				B3D69DBD2B77AA3200CBA806 /* AuthViewController.swift in Sources */,
+				B3D69D962B779B3300CBA806 /* OnboardingViewController.swift in Sources */,
 				B3D69D922B779B3300CBA806 /* AppDelegate.swift in Sources */,
 				B3D69D942B779B3300CBA806 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +352,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B3D69D972B779B3300CBA806 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B3D69D982B779B3300CBA806 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B3D69D9C2B779B3400CBA806 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -203,7 +400,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -218,7 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -266,7 +463,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -275,7 +472,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -287,6 +484,7 @@
 		};
 		B3D69DA32B779B3400CBA806 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71565657A72B774722536DC9 /* Pods-Sleep Tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -297,9 +495,9 @@
 				INFOPLIST_FILE = "Sleep Tracker/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,6 +513,7 @@
 		};
 		B3D69DA42B779B3400CBA806 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ADBDCCDFF62565D0CE8FFD2 /* Pods-Sleep Tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -325,9 +524,9 @@
 				INFOPLIST_FILE = "Sleep Tracker/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
