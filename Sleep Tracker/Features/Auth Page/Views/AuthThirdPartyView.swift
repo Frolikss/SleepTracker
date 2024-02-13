@@ -57,6 +57,7 @@ private extension AuthThirdPartyView {
         contentStackView.addArrangedSubview(googleButton)
         contentStackView.addArrangedSubview(facebookButton)
         contentStackView.addArrangedSubview(appleButton)
+        contentStackView.setCustomSpacing(24.0, after: divider)
         contentStackView.translatesAutoresizingMaskIntoConstraints = false
 
         self.addSubview(contentStackView)
@@ -85,7 +86,7 @@ private extension AuthThirdPartyView {
     func getButtonConfiguration(title: String, imageName: String) -> UIButton.Configuration {
         var buttonConfig = UIButton.Configuration.plain()
 
-        let buttonFont = UIFont(name: Fonts.ralewayBold.rawValue, size: 14) ?? .systemFont(ofSize: 14)
+        let buttonFont = UIFont(name: Fonts.ralewayMedium.rawValue, size: 14) ?? .systemFont(ofSize: 14)
 
         let attributedTitle = NSAttributedString(string: title, attributes: [
             .font: buttonFont,

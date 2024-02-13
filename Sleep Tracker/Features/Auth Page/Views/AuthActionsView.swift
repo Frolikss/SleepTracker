@@ -19,7 +19,7 @@ class AuthActionsView: UIView {
     private lazy var registerButton: UIButton = {
         let buttonConfig = getButtonConfiguration(
             title: "Create an account",
-            backgroudColor: .primary20)
+            backgroudColor: .grey95)
 
         let button = UIButton(configuration: buttonConfig)
 
@@ -79,7 +79,7 @@ private extension AuthActionsView {
 
         buttonConfig.baseBackgroundColor = backgroudColor
 
-        let buttonFont = UIFont(name: Fonts.ralewayBold.rawValue, size: 14) ?? .systemFont(ofSize: 14)
+        let buttonFont = UIFont(name: Fonts.ralewayBold.rawValue, size: 16) ?? .systemFont(ofSize: 16)
 
         let attributedTitle = NSAttributedString(string: title, attributes: [
             .font: buttonFont,

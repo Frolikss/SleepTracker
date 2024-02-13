@@ -35,7 +35,7 @@ private extension LogoView {
         NSLayoutConstraint.activate([
             logoImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             logoImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            logoImageView.widthAnchor.constraint(lessThanOrEqualToConstant: 128.0),
+            logoImageView.widthAnchor.constraint(equalToConstant: 128.0),
             logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor)
         ])
     }
