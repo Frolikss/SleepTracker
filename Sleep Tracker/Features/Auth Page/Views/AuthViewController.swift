@@ -8,7 +8,7 @@
 import UIKit
 
 class AuthViewController: UIViewController {
-    private let logoView = LogoView()
+    public let logoView = LogoView()
     private let actionsView = AuthActionsView()
     private let thirdPatyAuthView = AuthThirdPartyView()
 
@@ -32,6 +32,7 @@ class AuthViewController: UIViewController {
     override func loadView() {
         super.loadView()
         setupUI()
+        setupActions()
         setupLayout()
     }
 }
@@ -67,5 +68,19 @@ private extension AuthViewController {
 
     func setupUI() {
         self.view.backgroundColor = .grey100
+    }
+}
+
+// MARK: - Actions
+private extension AuthViewController {
+    func setupActions() {
+        let loginAction = UIAction { _ in
+            let loginVC = LoginViewController()
+
+            loginVC.modalPresentationStyle = .fullScreen
+            self.present(loginVC, animated: true)
+        }
+
+        actionsView.onLoginTapAction(action: loginAction)
     }
 }

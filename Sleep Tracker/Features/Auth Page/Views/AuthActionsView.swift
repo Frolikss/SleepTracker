@@ -91,3 +91,10 @@ private extension AuthActionsView {
         return buttonConfig
     }
 }
+
+// MARK: - Actions
+extension AuthActionsView {
+    public func onLoginTapAction(action: UIAction) {
+        loginButton.addAction(action, for: .touchUpInside)
+    }
+}
