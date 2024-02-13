@@ -99,14 +99,14 @@ private extension OnboardingViewController {
         pageControl.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            skipButton.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            skipButton.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -8.0),
             skipButton.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
 
             pageControl.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
             pageControl.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
 
-            nextButton.leadingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.leadingAnchor),
-            nextButton.trailingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.trailingAnchor),
+            nextButton.leadingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.leadingAnchor, constant: 20.0),
+            nextButton.trailingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.trailingAnchor, constant: -20.0),
             nextButton.heightAnchor.constraint(equalToConstant: 48.0),
             nextButton.bottomAnchor.constraint(
                 equalTo: self.view.safeAreaLayoutGuide.bottomAnchor,

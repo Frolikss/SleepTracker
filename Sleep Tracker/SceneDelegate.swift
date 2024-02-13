@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let isLaunchedBefore = UserDefaults.standard.bool(
             forKey: DefaultsNames.isLaunchedBefore.rawValue)
-print(isLaunchedBefore)
+
         if isLaunchedBefore {
             showMainScreen()
         } else {
