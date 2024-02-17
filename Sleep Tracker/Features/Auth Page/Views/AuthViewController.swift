@@ -8,7 +8,7 @@
 import UIKit
 
 class AuthViewController: UIViewController {
-    public let logoView = LogoView()
+    private let logoView = LogoView()
     private let actionsView = AuthActionsView()
     private let thirdPatyAuthView = AuthThirdPartyView()
 

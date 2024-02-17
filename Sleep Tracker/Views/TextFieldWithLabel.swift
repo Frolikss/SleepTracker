@@ -23,7 +23,6 @@ class TextFieldWithLabel: UIView {
         textField.font = UIFont(name: Fonts.ralewayMedium.rawValue, size: 14)
         textField.textColor = .white
 
-        textField.borderStyle = .roundedRect
         textField.backgroundColor = .grey95
 
         return textField
@@ -38,7 +37,7 @@ class TextFieldWithLabel: UIView {
         return stackView
     }()
 
-    init(title: String, placeholder: String) {
+    init(title: String, placeholder: String, keyboardType: UIKeyboardType = .default ) {
         super.init(frame: .zero)
         titleLabel.text = title
 
@@ -47,6 +46,7 @@ class TextFieldWithLabel: UIView {
             attributes: [
             .foregroundColor: UIColor.grey40])
 
+        textField.keyboardType = keyboardType
         textField.attributedPlaceholder = attributedPlaceholder
     }
 
@@ -60,8 +60,8 @@ class TextFieldWithLabel: UIView {
         setupLayout()
     }
 
-    public func setupDelegate(delegate: UITextFieldDelegate) {
-        textField.delegate = delegate
+    public func getTextField() -> UITextField {
+        return textField
     }
 }
 

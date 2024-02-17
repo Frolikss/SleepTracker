@@ -6,12 +6,21 @@
 //
 
 import UIKit
+import Combine
 
 class LoginViewController: UIViewController {
-    public let logoView = LogoView(imageSize: CGSize(width: 56.0, height: 56.0))
+    private let loginViewModel = LoginViewModel()
+    private var cancellables = Set<AnyCancellable>()
 
-    private let emailTextField = TextFieldWithLabel(title: "Email address", placeholder: "Email")
-    private let passwordTextField = TextFieldWithLabel(title: "Password", placeholder: "Password")
+    private let logoView = LogoView(imageSize: CGSize(width: 56.0, height: 56.0))
+
+    private let emailTextView = TextFieldWithLabel(
+        title: "Email address",
+        placeholder: "Email",
+        keyboardType: .emailAddress)
+    private let passwordTextView = TextFieldWithLabel(
+        title: "Password",
+        placeholder: "Password")
 
     private lazy var forgotPasswordButton: UIButton = {
         var buttonConfig = UIButton.Configuration.plain()
@@ -30,6 +39,26 @@ class LoginViewController: UIViewController {
         return button
     }()
 
+    private lazy var emailErrorLabel: UILabel = {
+        let label = UILabel()
+
+        label.font = UIFont(name: Fonts.ralewayBold.rawValue, size: 14)
+        label.textColor = .red
+        label.isHidden = true
+
+        return label
+    }()
+
+    private lazy var passwordErrorLabel: UILabel = {
+        let label = UILabel()
+
+        label.font = UIFont(name: Fonts.ralewayBold.rawValue, size: 14)
+        label.textColor = .red
+        label.isHidden = true
+
+        return label
+    }()
+
     private lazy var loginButton: UIButton = {
         var buttonConfig = UIButton.Configuration.filled()
 
@@ -44,6 +73,9 @@ class LoginViewController: UIViewController {
         buttonConfig.baseBackgroundColor = .primary100
 
         let button = UIButton(configuration: buttonConfig)
+
+        button.isEnabled = false
+        button.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
 
         return button
     }()
@@ -71,14 +103,18 @@ class LoginViewController: UIViewController {
         super.loadView()
         setupUI()
         setupLayout()
+        setupFieldsSubscriptions()
+        setupValidationSubscriptions()
     }
 }
 
 // MARK: - Setup UI && Layout
 private extension LoginViewController {
     func setupLayout() {
-        textFieldsStackView.addArrangedSubview(emailTextField)
-        textFieldsStackView.addArrangedSubview(passwordTextField)
+        textFieldsStackView.addArrangedSubview(emailTextView)
+        textFieldsStackView.addArrangedSubview(emailErrorLabel)
+        textFieldsStackView.addArrangedSubview(passwordTextView)
+        textFieldsStackView.addArrangedSubview(passwordErrorLabel)
         textFieldsStackView.addArrangedSubview(forgotPasswordButton)
 
         contentStackView.addArrangedSubview(logoView)
@@ -104,12 +140,89 @@ private extension LoginViewController {
     }
 
     func setupUI() {
-        emailTextField.setupDelegate(delegate: self)
-        passwordTextField.setupDelegate(delegate: self)
+        self.view.backgroundColor = .grey100
+
+        let passwordTextFIeld = passwordTextView.getTextField()
+        passwordTextFIeld.isSecureTextEntry = true
+        passwordTextFIeld.textContentType = .password
     }
 }
 
-// MARK: - UITextField Delegate
-extension LoginViewController: UITextFieldDelegate {
+// MARK: - Setup Subscriptions
+private extension LoginViewController {
+    func setupFieldsSubscriptions() {
+        let emailTextField = emailTextView.getTextField()
+        let passwordTextField = passwordTextView.getTextField()
 
+        NotificationCenter
+            .default
+            .publisher(for: UITextField.textDidChangeNotification, object: emailTextField)
+            .debounce(for: 0.7, scheduler: DispatchQueue.main)
+            .compactMap { ($0.object as? UITextField)?.text }
+            .sink { [weak self] email in
+                guard let self else { return }
+                loginViewModel.setEmail(email)
+            }
+            .store(in: &cancellables)
+
+        NotificationCenter
+            .default
+            .publisher(for: UITextField.textDidChangeNotification, object: passwordTextField)
+            .debounce(for: 0.7, scheduler: DispatchQueue.main)
+            .compactMap { ($0.object as? UITextField)?.text }
+            .sink { [weak self] password in
+                guard let self else { return }
+                loginViewModel.setPassword(password)
+            }
+            .store(in: &cancellables)
+    }
+
+    func setupValidationSubscriptions() {
+        let isCorrectEmail = loginViewModel.getIsCorrectEmail()
+        isCorrectEmail
+            .dropFirst()
+            .sink { [weak self] isCorrect in
+                guard let self else { return }
+
+                if !isCorrect {
+                    emailErrorLabel.isHidden = false
+                    emailErrorLabel.text = "Email format is incorrect"
+                } else {
+                    emailErrorLabel.isHidden = true
+                }
+            }
+            .store(in: &cancellables)
+
+        let isCorrectPassword = loginViewModel.getIsCorrectPassword()
+        isCorrectPassword
+            .dropFirst()
+            .sink { [weak self] isCorrect in
+                guard let self else { return }
+
+                if !isCorrect {
+                    passwordErrorLabel.isHidden = false
+                    passwordErrorLabel.text = "Password format is incorrect"
+                } else {
+                    passwordErrorLabel.isHidden = true
+                }
+            }
+            .store(in: &cancellables)
+
+        let isLoginEnabled = loginViewModel.getIsLoginEnabled()
+        isLoginEnabled
+            .sink { [weak self] isCorrect in
+                guard let self else { return }
+                if isCorrect {
+                    loginButton.isEnabled = true
+                }
+            }
+            .store(in: &cancellables)
+    }
+}
+
+// MARK: - Actions
+private extension LoginViewController {
+    @objc func didTapLoginButton() {
+        loginViewModel.submitLogin()
+    }
 }
