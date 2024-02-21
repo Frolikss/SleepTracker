@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A8CEA96F654C3673D453A8CE /* Pods_Sleep_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C409EB44AE4106BE0ADAD9D /* Pods_Sleep_Tracker.framework */; };
+		B3A586342B7BE37E005ABB2C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A586332B7BE37E005ABB2C /* LoginViewController.swift */; };
+		B3A586362B7BE7D7005ABB2C /* TextFieldWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A586352B7BE7D7005ABB2C /* TextFieldWithLabel.swift */; };
+		B3A586382B7BF9A0005ABB2C /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A586372B7BF9A0005ABB2C /* TextField.swift */; };
+		B3B9052F2B80A4D60091FC8E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B9052E2B80A4D60091FC8E /* LoginViewModel.swift */; };
+		B3B905312B80B4980091FC8E /* RegexValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B905302B80B4980091FC8E /* RegexValidations.swift */; };
 		B3C7F3BD2B7A926E0003D42E /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7F3BC2B7A926E0003D42E /* LogoView.swift */; };
 		B3C7F3BF2B7A9A980003D42E /* AuthActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7F3BE2B7A9A980003D42E /* AuthActionsView.swift */; };
 		B3C7F3C12B7A9E2A0003D42E /* AuthThirdPartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7F3C02B7A9E2A0003D42E /* AuthThirdPartyView.swift */; };
@@ -27,12 +32,23 @@
 		B3D69DC02B77C3D300CBA806 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3D69DAF2B77A0A200CBA806 /* Raleway-Regular.ttf */; };
 		B3D69DC12B77C3D300CBA806 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3D69DB12B77A0A200CBA806 /* Raleway-SemiBold.ttf */; };
 		B3D69DC22B77C3D300CBA806 /* PPNeueMontreal-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3D69DAC2B77A02B00CBA806 /* PPNeueMontreal-Medium.otf */; };
+		B3EA187E2B8665560034004B /* SleepTrackerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EA187D2B8665560034004B /* SleepTrackerRouter.swift */; };
+		B3EA18802B86671C0034004B /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EA187F2B86671C0034004B /* ApiConstants.swift */; };
+		B3EA18822B8667F20034004B /* ApiPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EA18812B8667F20034004B /* ApiPaths.swift */; };
+		B3EA18842B8669520034004B /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EA18832B8669520034004B /* AuthManager.swift */; };
+		B3EA18862B8669F70034004B /* ApiRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EA18852B8669F70034004B /* ApiRequestInterceptor.swift */; };
+		B3EA18882B867B630034004B /* UITextField+ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EA18872B867B630034004B /* UITextField+ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C409EB44AE4106BE0ADAD9D /* Pods_Sleep_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sleep_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71565657A72B774722536DC9 /* Pods-Sleep Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleep Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Sleep Tracker/Pods-Sleep Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		8ADBDCCDFF62565D0CE8FFD2 /* Pods-Sleep Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleep Tracker.release.xcconfig"; path = "Target Support Files/Pods-Sleep Tracker/Pods-Sleep Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		B3A586332B7BE37E005ABB2C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B3A586352B7BE7D7005ABB2C /* TextFieldWithLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithLabel.swift; sourceTree = "<group>"; };
+		B3A586372B7BF9A0005ABB2C /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		B3B9052E2B80A4D60091FC8E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B3B905302B80B4980091FC8E /* RegexValidations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexValidations.swift; sourceTree = "<group>"; };
 		B3C7F3BC2B7A926E0003D42E /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		B3C7F3BE2B7A9A980003D42E /* AuthActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthActionsView.swift; sourceTree = "<group>"; };
 		B3C7F3C02B7A9E2A0003D42E /* AuthThirdPartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthThirdPartyView.swift; sourceTree = "<group>"; };
@@ -54,6 +70,12 @@
 		B3D69DB72B77A23F00CBA806 /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
 		B3D69DB92B77A40700CBA806 /* UIFont+LineHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+LineHeight.swift"; sourceTree = "<group>"; };
 		B3D69DBC2B77AA3200CBA806 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		B3EA187D2B8665560034004B /* SleepTrackerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTrackerRouter.swift; sourceTree = "<group>"; };
+		B3EA187F2B86671C0034004B /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		B3EA18812B8667F20034004B /* ApiPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPaths.swift; sourceTree = "<group>"; };
+		B3EA18832B8669520034004B /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		B3EA18852B8669F70034004B /* ApiRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestInterceptor.swift; sourceTree = "<group>"; };
+		B3EA18872B867B630034004B /* UITextField+ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+ImageView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +97,31 @@
 				8ADBDCCDFF62565D0CE8FFD2 /* Pods-Sleep Tracker.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B3A586312B7BE334005ABB2C /* Login Page */ = {
+			isa = PBXGroup;
+			children = (
+				B3B9052D2B80A4260091FC8E /* ViewModel */,
+				B3A586322B7BE345005ABB2C /* Views */,
+			);
+			path = "Login Page";
+			sourceTree = "<group>";
+		};
+		B3A586322B7BE345005ABB2C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3A586332B7BE37E005ABB2C /* LoginViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B3B9052D2B80A4260091FC8E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B3B9052E2B80A4D60091FC8E /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B3C7F3BA2B7A91D20003D42E /* Views */ = {
@@ -101,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				B3C7F3C32B7AA18F0003D42E /* OrDivider.swift */,
+				B3A586372B7BF9A0005ABB2C /* TextField.swift */,
+				B3A586352B7BE7D7005ABB2C /* TextFieldWithLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				B3D69DBB2B77AA0000CBA806 /* Auth Page */,
+				B3A586312B7BE334005ABB2C /* Login Page */,
 				B3D69DA72B779DCC00CBA806 /* Onboarding Page */,
 			);
 			path = Features;
@@ -195,6 +245,7 @@
 		B3D69DB22B77A12100CBA806 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B3EA187C2B8665390034004B /* Networking */,
 				B3D69DB62B77A23200CBA806 /* Extensions */,
 				B3D69DB52B77A21A00CBA806 /* Helpers */,
 			);
@@ -205,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				B3D69DB32B77A12C00CBA806 /* Fonts.swift */,
+				B3B905302B80B4980091FC8E /* RegexValidations.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -214,6 +266,7 @@
 			children = (
 				B3D69DB72B77A23F00CBA806 /* UIColor+Colors.swift */,
 				B3D69DB92B77A40700CBA806 /* UIFont+LineHeight.swift */,
+				B3EA18872B867B630034004B /* UITextField+ImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -224,6 +277,18 @@
 				B3C7F3BB2B7A91DB0003D42E /* Views */,
 			);
 			path = "Auth Page";
+			sourceTree = "<group>";
+		};
+		B3EA187C2B8665390034004B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B3EA187D2B8665560034004B /* SleepTrackerRouter.swift */,
+				B3EA187F2B86671C0034004B /* ApiConstants.swift */,
+				B3EA18812B8667F20034004B /* ApiPaths.swift */,
+				B3EA18832B8669520034004B /* AuthManager.swift */,
+				B3EA18852B8669F70034004B /* ApiRequestInterceptor.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		E8006E58A552A7F7C45DB3A2 /* Frameworks */ = {
@@ -373,9 +438,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3A586342B7BE37E005ABB2C /* LoginViewController.swift in Sources */,
+				B3EA18842B8669520034004B /* AuthManager.swift in Sources */,
 				B3D69DBA2B77A40700CBA806 /* UIFont+LineHeight.swift in Sources */,
+				B3EA18802B86671C0034004B /* ApiConstants.swift in Sources */,
 				B3C7F3BD2B7A926E0003D42E /* LogoView.swift in Sources */,
+				B3A586382B7BF9A0005ABB2C /* TextField.swift in Sources */,
+				B3EA18882B867B630034004B /* UITextField+ImageView.swift in Sources */,
+				B3B9052F2B80A4D60091FC8E /* LoginViewModel.swift in Sources */,
+				B3EA187E2B8665560034004B /* SleepTrackerRouter.swift in Sources */,
+				B3EA18822B8667F20034004B /* ApiPaths.swift in Sources */,
+				B3A586362B7BE7D7005ABB2C /* TextFieldWithLabel.swift in Sources */,
 				B3C7F3C42B7AA18F0003D42E /* OrDivider.swift in Sources */,
+				B3EA18862B8669F70034004B /* ApiRequestInterceptor.swift in Sources */,
 				B3C7F3BF2B7A9A980003D42E /* AuthActionsView.swift in Sources */,
 				B3D69DA92B779EE000CBA806 /* SubOnboardingViewController.swift in Sources */,
 				B3D69DB82B77A23F00CBA806 /* UIColor+Colors.swift in Sources */,
@@ -384,6 +459,7 @@
 				B3D69DBD2B77AA3200CBA806 /* AuthViewController.swift in Sources */,
 				B3D69D962B779B3300CBA806 /* OnboardingViewController.swift in Sources */,
 				B3D69D922B779B3300CBA806 /* AppDelegate.swift in Sources */,
+				B3B905312B80B4980091FC8E /* RegexValidations.swift in Sources */,
 				B3D69D942B779B3300CBA806 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,7 +618,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "my.app.Sleep-Tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frolikss.Sleep-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -571,7 +647,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "my.app.Sleep-Tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frolikss.Sleep-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

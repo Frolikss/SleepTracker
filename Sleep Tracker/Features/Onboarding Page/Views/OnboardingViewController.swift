@@ -170,11 +170,11 @@ extension OnboardingViewController: UIPageViewControllerDelegate {
 
 // MARK: - Actions
 private extension OnboardingViewController {
-    @objc func skipTapped(_ sender: UIButton) {
+    @objc func skipTapped() {
         goToAuthPage()
     }
 
-       @objc func nextTapped(_ sender: UIButton) {
+       @objc func nextTapped() {
            let lastPage = pages.count - 1
 
            if lastPage == pageControl.currentPage {

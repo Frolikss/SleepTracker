@@ -8,6 +8,7 @@
 import UIKit
 
 class LogoView: UIView {
+    private let imageSize: CGSize
     private lazy var logoImageView: UIImageView = {
         let imageView = UIImageView()
 
@@ -18,6 +19,15 @@ class LogoView: UIView {
 
         return imageView
     }()
+
+    init(imageSize: CGSize = CGSize(width: 128.0, height: 128.0)) {
+        self.imageSize = imageSize
+        super.init(frame: .zero)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -35,8 +45,8 @@ private extension LogoView {
         NSLayoutConstraint.activate([
             logoImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             logoImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            logoImageView.widthAnchor.constraint(equalToConstant: 128.0),
-            logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor)
+            logoImageView.widthAnchor.constraint(equalToConstant: imageSize.width),
+            logoImageView.heightAnchor.constraint(equalToConstant: imageSize.height)
         ])
     }
 }
