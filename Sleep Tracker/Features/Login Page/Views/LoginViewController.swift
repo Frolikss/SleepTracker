@@ -142,6 +142,9 @@ private extension LoginViewController {
     func setupUI() {
         self.view.backgroundColor = .grey100
 
+        let emailTextField = emailTextView.getTextField()
+        emailTextField.autocapitalizationType = .none
+
         let passwordTextFIeld = passwordTextView.getTextField()
         passwordTextFIeld.isSecureTextEntry = true
         passwordTextFIeld.textContentType = .password
@@ -184,6 +187,8 @@ private extension LoginViewController {
             .sink { [weak self] isCorrect in
                 guard let self else { return }
 
+                emailTextView.setIsValidated(with: isCorrect)
+
                 if !isCorrect {
                     emailErrorLabel.isHidden = false
                     emailErrorLabel.text = "Email format is incorrect"
@@ -199,6 +204,8 @@ private extension LoginViewController {
             .sink { [weak self] isCorrect in
                 guard let self else { return }
 
+                passwordTextView.setIsValidated(with: isCorrect)
+
                 if !isCorrect {
                     passwordErrorLabel.isHidden = false
                     passwordErrorLabel.text = "Password format is incorrect"
@@ -212,9 +219,7 @@ private extension LoginViewController {
         isLoginEnabled
             .sink { [weak self] isCorrect in
                 guard let self else { return }
-                if isCorrect {
-                    loginButton.isEnabled = true
-                }
+                loginButton.isEnabled = isCorrect
             }
             .store(in: &cancellables)
     }

@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+enum ApiPaths: String {
+    case login = "/auth/login"
+}

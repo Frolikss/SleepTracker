@@ -63,6 +63,16 @@ class TextFieldWithLabel: UIView {
     public func getTextField() -> UITextField {
         return textField
     }
+
+    public func setIsValidated(with value: Bool) {
+        if value {
+            textField.setupRightImage(imageName: "checked")
+            textField.backgroundColor = .grey70
+        } else {
+            textField.backgroundColor = .grey95
+            textField.removeRightImage()
+        }
+    }
 }
 
 // MARK: - Setup UI && Layout

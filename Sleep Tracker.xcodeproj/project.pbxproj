@@ -32,6 +32,12 @@
 		B3D69DC02B77C3D300CBA806 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3D69DAF2B77A0A200CBA806 /* Raleway-Regular.ttf */; };
 		B3D69DC12B77C3D300CBA806 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3D69DB12B77A0A200CBA806 /* Raleway-SemiBold.ttf */; };
 		B3D69DC22B77C3D300CBA806 /* PPNeueMontreal-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3D69DAC2B77A02B00CBA806 /* PPNeueMontreal-Medium.otf */; };
+		B3EA187E2B8665560034004B /* SleepTrackerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EA187D2B8665560034004B /* SleepTrackerRouter.swift */; };
+		B3EA18802B86671C0034004B /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EA187F2B86671C0034004B /* ApiConstants.swift */; };
+		B3EA18822B8667F20034004B /* ApiPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EA18812B8667F20034004B /* ApiPaths.swift */; };
+		B3EA18842B8669520034004B /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EA18832B8669520034004B /* AuthManager.swift */; };
+		B3EA18862B8669F70034004B /* ApiRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EA18852B8669F70034004B /* ApiRequestInterceptor.swift */; };
+		B3EA18882B867B630034004B /* UITextField+ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EA18872B867B630034004B /* UITextField+ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +70,12 @@
 		B3D69DB72B77A23F00CBA806 /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
 		B3D69DB92B77A40700CBA806 /* UIFont+LineHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+LineHeight.swift"; sourceTree = "<group>"; };
 		B3D69DBC2B77AA3200CBA806 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		B3EA187D2B8665560034004B /* SleepTrackerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTrackerRouter.swift; sourceTree = "<group>"; };
+		B3EA187F2B86671C0034004B /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		B3EA18812B8667F20034004B /* ApiPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPaths.swift; sourceTree = "<group>"; };
+		B3EA18832B8669520034004B /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		B3EA18852B8669F70034004B /* ApiRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestInterceptor.swift; sourceTree = "<group>"; };
+		B3EA18872B867B630034004B /* UITextField+ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+ImageView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +245,7 @@
 		B3D69DB22B77A12100CBA806 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B3EA187C2B8665390034004B /* Networking */,
 				B3D69DB62B77A23200CBA806 /* Extensions */,
 				B3D69DB52B77A21A00CBA806 /* Helpers */,
 			);
@@ -253,6 +266,7 @@
 			children = (
 				B3D69DB72B77A23F00CBA806 /* UIColor+Colors.swift */,
 				B3D69DB92B77A40700CBA806 /* UIFont+LineHeight.swift */,
+				B3EA18872B867B630034004B /* UITextField+ImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -263,6 +277,18 @@
 				B3C7F3BB2B7A91DB0003D42E /* Views */,
 			);
 			path = "Auth Page";
+			sourceTree = "<group>";
+		};
+		B3EA187C2B8665390034004B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B3EA187D2B8665560034004B /* SleepTrackerRouter.swift */,
+				B3EA187F2B86671C0034004B /* ApiConstants.swift */,
+				B3EA18812B8667F20034004B /* ApiPaths.swift */,
+				B3EA18832B8669520034004B /* AuthManager.swift */,
+				B3EA18852B8669F70034004B /* ApiRequestInterceptor.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		E8006E58A552A7F7C45DB3A2 /* Frameworks */ = {
@@ -413,12 +439,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3A586342B7BE37E005ABB2C /* LoginViewController.swift in Sources */,
+				B3EA18842B8669520034004B /* AuthManager.swift in Sources */,
 				B3D69DBA2B77A40700CBA806 /* UIFont+LineHeight.swift in Sources */,
+				B3EA18802B86671C0034004B /* ApiConstants.swift in Sources */,
 				B3C7F3BD2B7A926E0003D42E /* LogoView.swift in Sources */,
 				B3A586382B7BF9A0005ABB2C /* TextField.swift in Sources */,
+				B3EA18882B867B630034004B /* UITextField+ImageView.swift in Sources */,
 				B3B9052F2B80A4D60091FC8E /* LoginViewModel.swift in Sources */,
+				B3EA187E2B8665560034004B /* SleepTrackerRouter.swift in Sources */,
+				B3EA18822B8667F20034004B /* ApiPaths.swift in Sources */,
 				B3A586362B7BE7D7005ABB2C /* TextFieldWithLabel.swift in Sources */,
 				B3C7F3C42B7AA18F0003D42E /* OrDivider.swift in Sources */,
+				B3EA18862B8669F70034004B /* ApiRequestInterceptor.swift in Sources */,
 				B3C7F3BF2B7A9A980003D42E /* AuthActionsView.swift in Sources */,
 				B3D69DA92B779EE000CBA806 /* SubOnboardingViewController.swift in Sources */,
 				B3D69DB82B77A23F00CBA806 /* UIColor+Colors.swift in Sources */,
@@ -586,7 +618,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "my.app.Sleep-Tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frolikss.Sleep-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -615,7 +647,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "my.app.Sleep-Tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frolikss.Sleep-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

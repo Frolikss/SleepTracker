@@ -70,8 +70,6 @@ class LoginViewModel {
     public func submitLogin() {
         state.value = .loading
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-            print("submit")
-        }
+        AuthManager.shared.login(email: email.value, password: password.value)
     }
 }
