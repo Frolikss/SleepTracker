@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KeychainAccess
 
 private enum DefaultsNames: String {
     case isLaunchedBefore
@@ -14,6 +15,8 @@ private enum DefaultsNames: String {
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+
+    private let keychainManager = Keychain(service: ApiConstants.bundleName)
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -24,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             forKey: DefaultsNames.isLaunchedBefore.rawValue)
 
         if isLaunchedBefore {
-            showMainScreen()
+            checkAuthentication()
         } else {
             showOnboardingScreen()
         }
@@ -32,7 +35,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
     }
 
-    func showOnboardingScreen() {
+    private func showHomePage() {
+        let homePageViewController = HomePageController()
+        let navigationController = UINavigationController(rootViewController: homePageViewController)
+
+        let appearence = UINavigationBarAppearance()
+
+        appearence.configureWithOpaqueBackground()
+
+        navigationController.navigationBar.standardAppearance = appearence
+        navigationController.navigationBar.scrollEdgeAppearance = appearence
+        navigationController.navigationBar.compactAppearance = appearence
+
+        window?.rootViewController = navigationController
+    }
+
+    private func showOnboardingScreen() {
         let onboardingViewController = OnboardingViewController(
             transitionStyle: .scroll,
             navigationOrientation: .horizontal)
@@ -42,8 +60,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         UserDefaults.standard.set(true, forKey: DefaultsNames.isLaunchedBefore.rawValue)
     }
 
-    func showMainScreen() {
+    private func showLoginScreen() {
         let mainViewController = AuthViewController()
-        window?.rootViewController = mainViewController
+        let navigationController = UINavigationController(rootViewController: mainViewController)
+
+        navigationController.navigationBar.isHidden = true
+
+        let appearence = UINavigationBarAppearance()
+
+        appearence.configureWithOpaqueBackground()
+
+        navigationController.navigationBar.standardAppearance = appearence
+        navigationController.navigationBar.scrollEdgeAppearance = appearence
+        navigationController.navigationBar.compactAppearance = appearence
+        window?.rootViewController = navigationController
+    }
+
+    public func checkAuthentication() {
+        UserManager.shared.getSelf { [weak self] user in
+            guard let self, user != nil else {
+                self?.showLoginScreen()
+                return
+            }
+
+            showHomePage()
+            window?.makeKeyAndVisible()
+        }
     }
 }

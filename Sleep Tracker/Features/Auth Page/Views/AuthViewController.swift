@@ -77,8 +77,7 @@ private extension AuthViewController {
         let loginAction = UIAction { _ in
             let loginVC = LoginViewController()
 
-            loginVC.modalPresentationStyle = .fullScreen
-            self.present(loginVC, animated: true)
+            self.navigationController?.pushViewController(loginVC, animated: true)
         }
 
         actionsView.onLoginTapAction(action: loginAction)

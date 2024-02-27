@@ -21,7 +21,7 @@ class ApiRequestInterceptor: RequestInterceptor {
         var urlRequest = urlRequest
 
         do {
-            guard let token = try keychainManager.get("accessToken") else {
+            guard let token = try keychainManager.get(ApiConstants.accessToken) else {
                 throw InterceptorError.noToken
             }
             urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
@@ -37,7 +37,7 @@ class ApiRequestInterceptor: RequestInterceptor {
         let response = request.task?.response as? HTTPURLResponse
 
         guard let statusCode = response?.statusCode, statusCode != 401 else {
-            try? keychainManager.remove(ApiConstants.bundleName)
+            try? keychainManager.remove(ApiConstants.accessToken)
             return completion(.doNotRetry)
         }
 

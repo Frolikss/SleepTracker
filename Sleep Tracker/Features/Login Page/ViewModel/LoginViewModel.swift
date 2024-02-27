@@ -67,9 +67,17 @@ class LoginViewModel {
         return isLoginEnabled
     }
 
-    public func submitLogin() {
+    public func submitLogin(sceneDelegate: SceneDelegate) {
         state.value = .loading
 
-        AuthManager.shared.login(email: email.value, password: password.value)
+        AuthManager.shared.login(email: email.value, password: password.value) { result in
+
+            switch result {
+            case .success:
+                sceneDelegate.checkAuthentication()
+            case .failure:
+                break
+            }
+        }
     }
 }
