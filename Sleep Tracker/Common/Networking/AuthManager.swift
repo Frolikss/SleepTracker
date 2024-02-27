@@ -7,31 +7,35 @@
 
 import Foundation
 import Alamofire
+import KeychainAccess
+
+enum AuthError: Error {
+    case login
+}
 
 class AuthManager {
     public static let shared = AuthManager()
+    private let keychainManager = Keychain(service: ApiConstants.bundleName)
 
-    private let sessionManager: Session = {
-        let configuration = URLSessionConfiguration.af.default
-
-        configuration.waitsForConnectivity = true
-
-        let interceptor = ApiRequestInterceptor()
-
-        return Session(configuration: configuration, interceptor: interceptor)
-    }()
-
-    func login(email: String, password: String) {
+    func login(email: String, password: String, completion: @escaping (Result<Bool, AuthError>) -> Void) {
         AF
             .request(SleepTrackerRouter.login(email, password))
             .validate()
-            .response { data in
-                print(data)
+            .responseDecodable(of: Login.self) { [weak self] data in
+                guard let self else { return }
+
+                switch data.result {
+                case .success(let response):
+                    do {
+                       try keychainManager.set(response.token, key: ApiConstants.accessToken)
+                        completion(.success(true))
+                    } catch {
+                        return
+                    }
+
+                case .failure:
+                    completion(.failure(AuthError.login))
+                }
             }
-//            .validate()
-//            .publishResponse(using: Any.self)
-//            .value()
-//            .receive(on: DispatchQueue.main)
-//            .eraseToAnyPublisher()
     }
 }

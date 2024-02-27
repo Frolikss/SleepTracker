@@ -160,7 +160,7 @@ private extension LoginViewController {
         NotificationCenter
             .default
             .publisher(for: UITextField.textDidChangeNotification, object: emailTextField)
-            .debounce(for: 0.7, scheduler: DispatchQueue.main)
+            .debounce(for: 0.4, scheduler: DispatchQueue.main)
             .compactMap { ($0.object as? UITextField)?.text }
             .sink { [weak self] email in
                 guard let self else { return }
@@ -171,7 +171,7 @@ private extension LoginViewController {
         NotificationCenter
             .default
             .publisher(for: UITextField.textDidChangeNotification, object: passwordTextField)
-            .debounce(for: 0.7, scheduler: DispatchQueue.main)
+            .debounce(for: 0.4, scheduler: DispatchQueue.main)
             .compactMap { ($0.object as? UITextField)?.text }
             .sink { [weak self] password in
                 guard let self else { return }
@@ -228,6 +228,9 @@ private extension LoginViewController {
 // MARK: - Actions
 private extension LoginViewController {
     @objc func didTapLoginButton() {
-        loginViewModel.submitLogin()
+        guard let sceneDelegate =
+                self.view.window?.windowScene?.delegate as? SceneDelegate
+        else { return }
+        loginViewModel.submitLogin(sceneDelegate: sceneDelegate)
     }
 }

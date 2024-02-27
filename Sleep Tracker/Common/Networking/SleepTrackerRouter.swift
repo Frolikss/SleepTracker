@@ -10,10 +10,11 @@ import Alamofire
 
 enum SleepTrackerRouter {
     case login(String, String)
+    case getSelf
 
     var baseUrl: String {
         switch self {
-        case .login:
+        case .login, .getSelf:
             return ApiConstants.baseUrl
         }
     }
@@ -22,6 +23,8 @@ enum SleepTrackerRouter {
         switch self {
         case .login:
             return ApiPaths.login.rawValue
+        case .getSelf:
+            return ApiPaths.getSelf.rawValue
         }
     }
 
@@ -29,6 +32,8 @@ enum SleepTrackerRouter {
         switch self {
         case .login:
             return .post
+        case .getSelf:
+            return .get
         }
     }
 
@@ -36,6 +41,8 @@ enum SleepTrackerRouter {
         switch self {
         case .login(let email, let password):
             return ["email": email, "password": password]
+        case .getSelf:
+            return nil
         }
     }
 }
@@ -48,6 +55,8 @@ extension SleepTrackerRouter: URLRequestConvertible {
         request.method = method
 
         switch method {
+        case .get:
+            request = try URLEncodedFormParameterEncoder().encode(parameters, into: request)
         case .post:
             request = try JSONParameterEncoder().encode(parameters, into: request)
             request.setValue("application/json", forHTTPHeaderField: "Accept")
