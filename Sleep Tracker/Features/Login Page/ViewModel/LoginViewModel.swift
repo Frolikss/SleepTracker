@@ -70,13 +70,15 @@ class LoginViewModel {
     public func submitLogin(sceneDelegate: SceneDelegate) {
         state.value = .loading
 
-        AuthManager.shared.login(email: email.value, password: password.value) { result in
+        AuthManager.shared.login(email: email.value, password: password.value) { [weak self] result in
+            guard let self else { return }
 
             switch result {
             case .success:
                 sceneDelegate.checkAuthentication()
+                state.value = .success
             case .failure:
-                break
+                state.value = .failure
             }
         }
     }

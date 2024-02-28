@@ -97,4 +97,8 @@ extension AuthActionsView {
     public func onLoginTapAction(action: UIAction) {
         loginButton.addAction(action, for: .touchUpInside)
     }
+
+    public func onRegisterTapAction(action: UIAction) {
+        registerButton.addAction(action, for: .touchUpInside)
+    }
 }

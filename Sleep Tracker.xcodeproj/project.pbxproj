@@ -11,9 +11,14 @@
 		B3A586342B7BE37E005ABB2C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A586332B7BE37E005ABB2C /* LoginViewController.swift */; };
 		B3A586362B7BE7D7005ABB2C /* TextFieldWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A586352B7BE7D7005ABB2C /* TextFieldWithLabel.swift */; };
 		B3A586382B7BF9A0005ABB2C /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A586372B7BF9A0005ABB2C /* TextField.swift */; };
+		B3AE76772B8FABE900CABC8F /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE76762B8FABE900CABC8F /* EmailViewController.swift */; };
+		B3AE76792B8FAC3C00CABC8F /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE76782B8FAC3C00CABC8F /* PasswordViewController.swift */; };
+		B3AE767B2B8FB5E300CABC8F /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE767A2B8FB5E300CABC8F /* BirthdayViewController.swift */; };
+		B3AE767E2B8FC36C00CABC8F /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE767D2B8FC36C00CABC8F /* NextViewController.swift */; };
 		B3B4F4732B8E4EFA008CD5DA /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B4F4722B8E4EFA008CD5DA /* HomePageController.swift */; };
 		B3B4F4752B8E51B2008CD5DA /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B4F4742B8E51B2008CD5DA /* UserManager.swift */; };
 		B3B4F4782B8E53A2008CD5DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B4F4772B8E53A2008CD5DA /* User.swift */; };
+		B3B4F47C2B8E6237008CD5DA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B4F47B2B8E6237008CD5DA /* RegisterViewController.swift */; };
 		B3B5DE112B87BA1600B4E8C2 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5DE102B87BA1600B4E8C2 /* Login.swift */; };
 		B3B9052F2B80A4D60091FC8E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B9052E2B80A4D60091FC8E /* LoginViewModel.swift */; };
 		B3B905312B80B4980091FC8E /* RegexValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B905302B80B4980091FC8E /* RegexValidations.swift */; };
@@ -51,9 +56,14 @@
 		B3A586332B7BE37E005ABB2C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B3A586352B7BE7D7005ABB2C /* TextFieldWithLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithLabel.swift; sourceTree = "<group>"; };
 		B3A586372B7BF9A0005ABB2C /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		B3AE76762B8FABE900CABC8F /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		B3AE76782B8FAC3C00CABC8F /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		B3AE767A2B8FB5E300CABC8F /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
+		B3AE767D2B8FC36C00CABC8F /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		B3B4F4722B8E4EFA008CD5DA /* HomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		B3B4F4742B8E51B2008CD5DA /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		B3B4F4772B8E53A2008CD5DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B3B4F47B2B8E6237008CD5DA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B3B5DE102B87BA1600B4E8C2 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		B3B9052E2B80A4D60091FC8E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B3B905302B80B4980091FC8E /* RegexValidations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexValidations.swift; sourceTree = "<group>"; };
@@ -125,6 +135,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		B3AE767C2B8FC35F00CABC8F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B3AE767D2B8FC36C00CABC8F /* NextViewController.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		B3B4F4702B8E4EE7008CD5DA /* Home Page */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +165,26 @@
 				B3B4F4772B8E53A2008CD5DA /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B3B4F4792B8E5EF1008CD5DA /* Register Page */ = {
+			isa = PBXGroup;
+			children = (
+				B3AE767C2B8FC35F00CABC8F /* Protocols */,
+				B3B4F47A2B8E5EF7008CD5DA /* Views */,
+			);
+			path = "Register Page";
+			sourceTree = "<group>";
+		};
+		B3B4F47A2B8E5EF7008CD5DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3B4F47B2B8E6237008CD5DA /* RegisterViewController.swift */,
+				B3AE767A2B8FB5E300CABC8F /* BirthdayViewController.swift */,
+				B3AE76762B8FABE900CABC8F /* EmailViewController.swift */,
+				B3AE76782B8FAC3C00CABC8F /* PasswordViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B3B5DE0F2B87BA0B00B4E8C2 /* Models */ = {
@@ -240,6 +278,7 @@
 		B3D69DA62B779DC100CBA806 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				B3B4F4792B8E5EF1008CD5DA /* Register Page */,
 				B3B4F4702B8E4EE7008CD5DA /* Home Page */,
 				B3D69DBB2B77AA0000CBA806 /* Auth Page */,
 				B3A586312B7BE334005ABB2C /* Login Page */,
@@ -484,6 +523,7 @@
 			files = (
 				B3A586342B7BE37E005ABB2C /* LoginViewController.swift in Sources */,
 				B3EA18842B8669520034004B /* AuthManager.swift in Sources */,
+				B3AE767B2B8FB5E300CABC8F /* BirthdayViewController.swift in Sources */,
 				B3D69DBA2B77A40700CBA806 /* UIFont+LineHeight.swift in Sources */,
 				B3EA18802B86671C0034004B /* ApiConstants.swift in Sources */,
 				B3C7F3BD2B7A926E0003D42E /* LogoView.swift in Sources */,
@@ -493,18 +533,22 @@
 				B3B9052F2B80A4D60091FC8E /* LoginViewModel.swift in Sources */,
 				B3EA187E2B8665560034004B /* SleepTrackerRouter.swift in Sources */,
 				B3EA18822B8667F20034004B /* ApiPaths.swift in Sources */,
+				B3AE76792B8FAC3C00CABC8F /* PasswordViewController.swift in Sources */,
 				B3A586362B7BE7D7005ABB2C /* TextFieldWithLabel.swift in Sources */,
 				B3B4F4732B8E4EFA008CD5DA /* HomePageController.swift in Sources */,
 				B3C7F3C42B7AA18F0003D42E /* OrDivider.swift in Sources */,
 				B3EA18862B8669F70034004B /* ApiRequestInterceptor.swift in Sources */,
+				B3AE767E2B8FC36C00CABC8F /* NextViewController.swift in Sources */,
 				B3B5DE112B87BA1600B4E8C2 /* Login.swift in Sources */,
 				B3C7F3BF2B7A9A980003D42E /* AuthActionsView.swift in Sources */,
+				B3AE76772B8FABE900CABC8F /* EmailViewController.swift in Sources */,
 				B3B4F4752B8E51B2008CD5DA /* UserManager.swift in Sources */,
 				B3D69DA92B779EE000CBA806 /* SubOnboardingViewController.swift in Sources */,
 				B3D69DB82B77A23F00CBA806 /* UIColor+Colors.swift in Sources */,
 				B3D69DB42B77A12C00CBA806 /* Fonts.swift in Sources */,
 				B3C7F3C12B7A9E2A0003D42E /* AuthThirdPartyView.swift in Sources */,
 				B3D69DBD2B77AA3200CBA806 /* AuthViewController.swift in Sources */,
+				B3B4F47C2B8E6237008CD5DA /* RegisterViewController.swift in Sources */,
 				B3D69D962B779B3300CBA806 /* OnboardingViewController.swift in Sources */,
 				B3D69D922B779B3300CBA806 /* AppDelegate.swift in Sources */,
 				B3B905312B80B4980091FC8E /* RegexValidations.swift in Sources */,

@@ -29,6 +29,11 @@ class AuthViewController: UIViewController {
         return stackView
     }()
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+
     override func loadView() {
         super.loadView()
         setupUI()
@@ -75,11 +80,18 @@ private extension AuthViewController {
 private extension AuthViewController {
     func setupActions() {
         let loginAction = UIAction { _ in
-            let loginVC = LoginViewController()
+            let loginViewController = LoginViewController()
 
-            self.navigationController?.pushViewController(loginVC, animated: true)
+            self.navigationController?.pushViewController(loginViewController, animated: true)
+        }
+
+        let registerAction = UIAction { _ in
+            let registerViewController = RegisterViewController()
+
+            self.navigationController?.pushViewController(registerViewController, animated: true)
         }
 
         actionsView.onLoginTapAction(action: loginAction)
+        actionsView.onRegisterTapAction(action: registerAction)
     }
 }
