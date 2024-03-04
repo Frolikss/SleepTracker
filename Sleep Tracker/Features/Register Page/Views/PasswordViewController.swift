@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Combine
 
 class PasswordViewController: UIViewController {
+    private var registerViewModel: RegisterViewModel
+    private var cancellables = Set<AnyCancellable>()
 
     private let passwordTextView = TextFieldWithLabel(title: "Create a password", placeholder: "Password")
 
@@ -39,10 +42,31 @@ class PasswordViewController: UIViewController {
         return stackView
     }()
 
+    private lazy var passwordErrorLabel: UILabel = {
+        let label = UILabel()
+
+        label.font = UIFont(name: Fonts.ralewayBold.rawValue, size: 14)
+        label.textColor = .red
+        label.isHidden = true
+
+        return label
+    }()
+
+    init(registerViewModel: RegisterViewModel) {
+        self.registerViewModel = registerViewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func loadView() {
         super.loadView()
         setupUI()
         setupLayout()
+        setupFieldsSubscriptions()
+        setupValidationsSubscriptions()
     }
 }
 
@@ -51,6 +75,7 @@ private extension PasswordViewController {
     func setupLayout() {
         contentStackView.translatesAutoresizingMaskIntoConstraints = false
         contentStackView.addArrangedSubview(passwordTextView)
+        contentStackView.addArrangedSubview(passwordErrorLabel)
         contentStackView.addArrangedSubview(nextButton)
 
         self.view.addSubview(contentStackView)
@@ -73,11 +98,54 @@ private extension PasswordViewController {
         let passwordTextField = passwordTextView.getTextField()
         passwordTextField.isSecureTextEntry = true
         passwordTextField.textContentType = .password
+
+        nextButton.isEnabled = false
     }
 }
 
+// MARK: - NextViewController Protocol
 extension PasswordViewController: NextViewController {
     public func setNextButtonAction(action: UIAction) {
         self.nextButton.addAction(action, for: .touchUpInside)
+    }
+}
+
+// MARK: Subscriptions
+private extension PasswordViewController {
+    func setupFieldsSubscriptions() {
+        let passwordTextField = passwordTextView.getTextField()
+
+        NotificationCenter
+            .default
+            .publisher(
+                for: UITextField.textDidChangeNotification,
+                object: passwordTextField)
+            .debounce(for: 0.4, scheduler: DispatchQueue.main)
+            .compactMap { ($0.object as? UITextField)?.text }
+            .sink { [weak self] password in
+                guard let self else { return }
+                registerViewModel.setPassword(password)
+            }
+            .store(in: &cancellables)
+    }
+
+    func setupValidationsSubscriptions() {
+        let isCorrectPassword = registerViewModel.getIsCorrectPassword()
+
+        isCorrectPassword
+            .dropFirst()
+            .sink { [weak self] isCorrect in
+                guard let self else { return }
+                passwordTextView.setIsValidated(with: isCorrect)
+
+                if !isCorrect {
+                    passwordErrorLabel.isHidden = false
+                    passwordErrorLabel.text = ValidationErrors.password.rawValue
+                } else {
+                    passwordErrorLabel.isHidden = true
+                    nextButton.isEnabled = isCorrect
+                }
+            }
+            .store(in: &cancellables)
     }
 }

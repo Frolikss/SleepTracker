@@ -24,20 +24,13 @@ class LoginViewModel {
 
     private var isCorrectEmail: AnyPublisher<Bool, Never> {
         email
-            .map { email in
-                let emailPredicate = NSPredicate(format: "SELF MATCHES %@", RegexValidations.email.rawValue)
-
-                return emailPredicate.evaluate(with: email)
-            }
+            .map { Validations.shared.validateEmail($0) }
             .eraseToAnyPublisher()
     }
 
     private var isCorrectPassword: AnyPublisher<Bool, Never> {
         password
-            .map { password in
-                let minLength = 8
-                return password.count >= minLength
-            }
+            .map { Validations.shared.validatePassword($0) }
             .eraseToAnyPublisher()
     }
 

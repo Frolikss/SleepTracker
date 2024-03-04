@@ -8,17 +8,19 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
+    private let registerViewModel = RegisterViewModel()
+
     private lazy var progressView: UIProgressView = {
         let progressView = UIProgressView()
         return progressView
     }()
 
-    private let steps: [NextViewController] = {
-        let emailStep = EmailViewController()
-        let passwordStep = PasswordViewController()
-        let birthdayStep = BirthdayViewController()
+    private lazy var steps: [NextViewController] = {
+        let emailStep = EmailViewController(registerViewModel: registerViewModel)
+        let passwordStep = PasswordViewController(registerViewModel: registerViewModel)
+        let birthdayStep = BirthdayViewController(registerViewModel: registerViewModel)
 
-        return [emailStep, passwordStep, birthdayStep]
+        return [birthdayStep, emailStep, passwordStep]
     }()
 
     private lazy var containerView: UIView = {
@@ -95,6 +97,7 @@ extension RegisterViewController {
             step.view.isHidden = true
             containerView.addSubview(step.view)
             step.didMove(toParent: self)
+
             step.setNextButtonAction(action: action)
 
             step.view.translatesAutoresizingMaskIntoConstraints = false
@@ -110,7 +113,7 @@ extension RegisterViewController {
     }
 
     private func updateProgress() {
-        let progress = Float(currentStep) / Float(steps.count - 1)
+        let progress = Float(currentStep + 1) / Float(steps.count)
         progressView.setProgress(progress, animated: true)
     }
 }
