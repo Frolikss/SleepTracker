@@ -191,7 +191,7 @@ private extension LoginViewController {
 
                 if !isCorrect {
                     emailErrorLabel.isHidden = false
-                    emailErrorLabel.text = "Email format is incorrect"
+                    emailErrorLabel.text = ValidationErrors.email.rawValue
                 } else {
                     emailErrorLabel.isHidden = true
                 }
@@ -208,7 +208,7 @@ private extension LoginViewController {
 
                 if !isCorrect {
                     passwordErrorLabel.isHidden = false
-                    passwordErrorLabel.text = "Password format is incorrect"
+                    passwordErrorLabel.text = ValidationErrors.password.rawValue
                 } else {
                     passwordErrorLabel.isHidden = true
                 }

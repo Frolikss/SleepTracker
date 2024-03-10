@@ -43,6 +43,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         appearence.configureWithOpaqueBackground()
 
+        navigationController.navigationBar.backgroundColor = .red
         navigationController.navigationBar.standardAppearance = appearence
         navigationController.navigationBar.scrollEdgeAppearance = appearence
         navigationController.navigationBar.compactAppearance = appearence
@@ -67,12 +68,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         navigationController.navigationBar.isHidden = true
 
         let appearence = UINavigationBarAppearance()
-
         appearence.configureWithOpaqueBackground()
+        appearence.backgroundColor = .grey100
+        appearence.titleTextAttributes = [
+            .font: UIFont(name: Fonts.ralewayBold.rawValue, size: 14.0) ?? .systemFont(ofSize: 14.0),
+            .foregroundColor: UIColor.white
+        ]
 
+        navigationController.navigationBar.tintColor = .white
         navigationController.navigationBar.standardAppearance = appearence
         navigationController.navigationBar.scrollEdgeAppearance = appearence
         navigationController.navigationBar.compactAppearance = appearence
+
         window?.rootViewController = navigationController
     }
 

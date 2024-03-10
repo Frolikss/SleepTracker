@@ -174,16 +174,16 @@ private extension OnboardingViewController {
         goToAuthPage()
     }
 
-       @objc func nextTapped() {
-           let lastPage = pages.count - 1
+    @objc func nextTapped() {
+        let lastPage = pages.count - 1
 
-           if lastPage == pageControl.currentPage {
-               goToAuthPage()
-           } else {
-               pageControl.currentPage += 1
-               goToNextPage()
-           }
-       }
+        if lastPage == pageControl.currentPage {
+            goToAuthPage()
+        } else {
+            pageControl.currentPage += 1
+            goToNextPage()
+        }
+    }
 
     func goToAuthPage() {
         let authVC = AuthViewController()
